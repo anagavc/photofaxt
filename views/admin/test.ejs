@@ -1,0 +1,382 @@
+<% layout('layouts/boilerplate')%>
+
+<!-- beginning of the hero -->
+<section>
+    <div class="p-5 mb-4 bg-light rounded-3 hero">
+        <div class="container d-flex">
+            <div class=" container-fluid py-5 mt-5">
+                <h1 class="display-5 fw-bold col-md"><%=data.herocaption %> </h1>
+                <a href="" type="button" class="btn btn-primary btn-lg" id="button" data-bs-toggle="modal"
+                    data-bs-target="#bookUs">Book Us</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- end of our hero section -->
+
+<!-- beginning of our services section -->
+<section class="white mb-5" id="services">
+    <div class="d-flex container">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row d-flex">
+            <div class="title">
+
+                <h2 class="text-center mb-3">
+                    <i class="bi bi-cart-check-fill"></i>
+                    Our Services
+                </h2>
+                <p class="text-center mb-3 titleDesc">Some of the services we offer</p>
+            </div>
+            <% for (let service of services){%>
+            <div class="col-lg-4 text-center ali">
+                <%-service.serviceIcon%>
+
+                <h6><%=service.serviceName%> </h6>
+                <p><%=service.serviceDesc%></p>
+                <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <% } %>
+
+
+
+        </div><!-- /.row -->
+
+    </div>
+</section>
+<!-- end of our services section -->
+<!-- beginning of our about section -->
+<section class="dark py-2 mb-5">
+    <div class="title mt-5">
+        <h2 class="text-center">
+            <i class="bi bi-card-list"></i>
+            About Us
+        </h2>
+        <p class="text-center mb-5 titleDesc">About our firm</p>
+    </div>
+    <div class="container mb-5">
+
+
+        <div class="row featurette">
+            <div class="col-md-6 order-md-2">
+
+                <img src="images/laura.jpg" alt="..." class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 order-md-1 leftText">
+
+                <p class="lead"><%=data.aboutus%></p>
+                <a href="about" type="button" class="btn btn-outline-secondary mb-5" id="secondary">Read More</a>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- end of our about section -->
+<!-- beginning of our gallery section -->
+<section class="container white" id="galleries">
+    <div class="title mt-5">
+        <h2 class="text-center">
+            <i class="bi bi-image-fill"></i>
+            Gallery
+        </h2>
+        <p class="text-center mb-3 titleDesc">Glance through some of our works</p>
+    </div>
+    <div class="album py-5">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/sports.jfif" alt="" class="img-fluid" id="gallery">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Sports
+                            </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="/gallery" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/fashion.jfif" alt="" class="img-fluid" id="gallery">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Fashion
+                            </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="gallery" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/portraits.jfif" alt="" class="img-fluid" id="gallery">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Portraits
+                            </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="gallery" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/still-life.jfif" alt="" class="img-fluid" id="gallery">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Still-life
+                            </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="gallery" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/editorial.jfif" alt="" class="img-fluid" id="gallery">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Editorial
+                            </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="gallery" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/archi.jfif" alt="" class="img-fluid" id="gallery">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Architecturial
+                            </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="gallery" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end of our gallery section -->
+<!-- beginning of our reviews section -->
+<section class="dark py-5" id="revs">
+
+    <div class="container">
+
+        <div class="row d-flex">
+            <div class="review rounded">
+                <div class="title mt-5">
+                    <h2 class="text-center white">
+                        <i class="bi bi-layout-text-window"></i>
+                        Reviews
+                    </h2>
+                    <p class="text-center mb-3 titleDesc">Some reviews from pleased clients</p>
+                </div>
+                <div id="reviewControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active review-1">
+                            <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 text-center ali">
+                                <img src="images/review.jfif" class="img-fluid rounded-circle" id="reviewImg" alt="">
+
+                                <h6 class="reviewTitle mt-3">Jane Doe</h6>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <p>"Tremendous Service"</p>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item review-1">
+                            <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 text-center ali">
+                                <img src="images/80.jpg" class="img-fluid rounded-circle" id="reviewImg" alt="">
+
+                                <h6 class="reviewTitle mt-3">Diana Snow</h6>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <p>"Timely delivery"</p>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item review-1">
+                            <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 text-center ali">
+                                <img src="images/12.jpg" class="img-fluid rounded-circle" id="reviewImg" alt="">
+
+                                <h6 class="reviewTitle mt-3">John Smithie</h6>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <p>"Good Service"</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#reviewControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#reviewControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+
+
+        </div><!-- /.row -->
+
+    </div>
+
+</section>
+<!-- end of reviews section -->
+<!-- beginning of faq section -->
+<section class="container white mb-5" id="faqs">
+    <div class="title mt-5">
+        <h2 class="text-center">
+            <i class="bi bi-question-square-fill"></i>
+            FAQS
+        </h2>
+        <p class="text-center mb-3 titleDesc">Some frequently asked questions and their answers</p>
+    </div>
+    <div class="accordion accordion-flush" id="faq">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    How reliable is your organization?
+
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#faq">
+                <div class="accordion-body">We are quite reliable because we understand the rigours that have to do
+                    with social media communication.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    When was your firm founded?
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#faq">
+                <div class="accordion-body">In the year 2015.
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Where is your firm located at?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#faq">
+                <div class="accordion-body">We are located everywhere on the digital hemisphere.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end of faq question -->
+<!-- beginning of modal -->
+<div class="modal fade" id="bookUs" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Fill in your details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="phone" class="form-control" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="doe" class="form-label">Date of Event</label>
+                        <input type="date" class="form-control" id="date" placeholder="Enter the date of the event">
+                    </div>
+                    <div class="mb-3">
+                        <label for="desc" class="form-label">Description of the event</label>
+                        <textarea class="form-control" id="desc" rows="3"></textarea>
+                    </div>
+                    <button class="btn text-light" id="button">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

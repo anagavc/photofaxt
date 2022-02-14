@@ -1,0 +1,37 @@
+<% layout('layouts/adminBoilerplate')%>
+<section class="admin mt-5 py-5">
+    <div class="container adminPanel rounded">
+
+        <div class="row ">
+            <div class="col-md-6 offset-md-3">
+                <div class="loginTitle mt-5">
+
+                    <h6 class="text-center"><i class="bi bi-person-circle px-2"></i>Registration</h6>
+                </div>
+                <form action="register" method="POST">
+                    <div class="mb-3 mt-3">
+                        <label for="username" class="form-label loginLabel">Username</label>
+                        <input type="text" class="form-control" id="username" name="username"
+                            placeholder="Enter your username">
+                    </div>
+                    <div class="mb-5">
+                        <label for="password" class="form-label loginLabel">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                            placeholder="Enter your password">
+                    </div>
+                    <div class="d-grid gap-2 col-6 mb-5 mx-auto">
+                        <button class="btn btn-primary" type="submit" id="login">Register</button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</section>

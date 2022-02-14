@@ -1,0 +1,43 @@
+<% layout('layouts/adminBoilerplate')%>
+<section class="container py-5">
+    <div class="mt-5">
+        <nav class=""
+            style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item edit"><i class="bi bi-pencil-square"></i><a class="px-2"
+                        href="/admin/dashboard">Reviews</a></li>
+
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <% for(let review of reviews) {%>
+        <div class="col-lg-4 text-center mb-3">
+            <div class="rounded" id="revBg">
+                <img src="<%=review.revImage.url%>" class="img-fluid rounded-circle" id="reviewImg" alt="">
+
+                <h6 class="reviewTitle mt-3 text-light"><%=review.name%></h6>
+                <p class="starability-result mx-auto" data-rating="<%=review.rating%>">
+                    Rated: <%=review.rating%>stars
+                </p>
+                <p>"<%=review.comment%>"</p>
+                <div class="d-flex justify-content-center align-items-center mx-3">
+                    <a href="review/<%=review._id%>" class="btn btn-sm btn-danger delete fs-bold" id="revEdit">Edit
+                        Review</a>
+                    <form action="review/<%=review._id%>?_method=DELETE" method="POST" class="mx-3">
+                        <button class="btn btn-sm btn-danger delete" type="submit">Delete Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <% } %>
+    </div>
+
+    <div class="gap-2 col-6 mb-5">
+        <a href="overview" class="btn btn-primary mb-3" id="login">Back</a>
+        <a href="addReview" class="btn btn-primary mb-3" id="add">Add a new review</a>
+    </div>
+
+</section>

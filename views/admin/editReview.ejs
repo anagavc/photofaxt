@@ -1,0 +1,71 @@
+<% layout('layouts/adminBoilerplate')%>
+<section class="admin edit py-5">
+    <div class="container">
+        <nav class="mt-5"
+            style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item edit"><i class="bi bi-pencil-square"></i><a class="px-2"
+                        href="../review">Reviews</a>
+                </li>
+                <li class="breadcrumb-item"><i class="bi bi-pencil-square"></i><a class="px-2" href="#">Edit
+                        review</a></li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container adminPanel rounded">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form action="<%reviews._id%>?_method=PUT" method="POST" class="validated-form" novalidate
+                    enctype="multipart/form-data">
+                    <div class="mt-5 mb-3">
+                        <label for="revImage" class="form-label">Reviewer's avatar</label>
+                        <input class="form-control" name="revImage" type="file" id="revImage" multiple>
+                    </div>
+                    <div class="mb-3">
+                        <label for="revrName" class="form-label loginLabel">Reviewer's Name</label>
+                        <input type="text" class="form-control" name="review[name]" id="revrName"
+                            placeholder="Enter the reviewer's name" value="<%=reviews.name%>">
+                    </div>
+
+                    <div>
+                        <label for="rating" class="form-label loginLabel">Rating</label>
+                        <fieldset class="starability-basic">
+                            <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1"
+                                checked aria-label="No rating." />
+                            <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+                            <label for="first-rate1" title="Terrible">1 star</label>
+                            <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+                            <label for="first-rate2" title="Not good">2 stars</label>
+                            <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+                            <label for="first-rate3" title="Average">3 stars</label>
+                            <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+                            <label for="first-rate4" title="Very good">4 stars</label>
+                            <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                            <label for="first-rate5" title="Amazing">5 stars</label>
+                        </fieldset>
+                    </div>
+                    <div class="mb-3">
+                        <label for="servDesc" class="form-label loginLabel">Review</label>
+                        <textarea class="form-control" id="revw" name="review[comment]"
+                            rows="3"><%=reviews.comment%></textarea>
+                    </div>
+
+
+                    <div class="d-grid gap-2 col-6 mb-5 mx-auto">
+                        <button class="btn btn-primary" type="submit" id="login">Update</button>
+                        <a href="../review" class="btn btn-primary" id="cancel">Cancel</a>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</section>

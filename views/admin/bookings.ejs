@@ -1,0 +1,45 @@
+<% layout('layouts/adminBoilerplate')%>
+<section class="admin py-5">
+    <div class="container mt-3">
+        <div class="table-md-responsive">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Date of Booking</th>
+                        <th scope="col">Order Description</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for (let booking of bookings){%>
+                    <tr>
+                        <td><%=booking.name%></td>
+                        <td><%=booking.phone%> </td>
+                        <td><%=booking.date%> </td>
+                        <td><%=booking.desc%> </td>
+                        <td>
+                            <form action="bookings/<%=booking._id%>?_method=DELETE" method="POST">
+
+                                <button class="btn btn-danger">Delete</button>
+
+                            </form>
+                        </td>
+
+                    </tr>
+                    <% } %>
+                </tbody>
+
+            </table>
+
+            <a href="overview" class="btn btn-primary" type="submit" id="edit">Back</a>
+
+
+        </div>
+
+
+    </div>
+</section>

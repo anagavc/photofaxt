@@ -1,0 +1,28 @@
+<% layout('layouts/boilerplate')%>
+<section class="about white py-5">
+    <div class="title mt-5">
+        <h2 class="text-center">
+            <i class="bi bi-card-list"></i>
+            About Us
+        </h2>
+        <h6 class="text-center mb-3">About our firm</h6>
+    </div>
+    <div class="container">
+
+
+        <div class="row featurette">
+            <div class="col-md-6 order-md-1">
+
+                <p class="lead titleDesc"><%=about.aboutus%> </p>
+                <a href="/" type="button" class="btn btn-outline-secondary mb-5" id="aboutBtn">Back</a>
+            </div>
+            <div class="col-md-6 order-md-2">
+
+                <img src="<%=about.aboutUsImg.url%> " alt="..." class="img-fluid rounded">
+            </div>
+
+
+        </div>
+    </div>
+
+</section>

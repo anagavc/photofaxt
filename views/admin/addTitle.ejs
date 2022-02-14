@@ -1,0 +1,43 @@
+<% layout('layouts/adminBoilerplate')%>
+<section class="edit py-5" style="height:100vh">
+    <div class="container">
+        <nav class=""
+            style="--bs-breadcrumb-divider: url(&#34;value:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><i class="bi bi-pencil-square"></i><a class="px-2"
+                        href="/admin/overview">Add
+                        about</a></li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container adminPanel rounded">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form action="addTitle" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3 mt-5">
+                        <label for="favicon" class="form-label">Favicon</label>
+                        <input class="form-control" name="favicon" type="file" id="favicon">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="webtitle" class="form-label loginLabel">Website Title</label>
+                        <input type="text" class="form-control" name="webtitle" id="webtitle"
+                            placeholder="Enter the website's title">
+                    </div>
+                    <div class="d-grid gap-2 col-6 mb-5 mx-auto">
+                        <button class="btn btn-primary" type="submit" id="login">Save</button>
+                        <a href="overview" class="btn btn-primary" type="submit" id="cancel">Cancel</a>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</section>
