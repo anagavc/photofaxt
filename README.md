@@ -1,7 +1,7 @@
 
 # Photofaxt
 
-`This is a  fully dynamic NodeJS and Mongo DB based portfolio for a digital agency and it was my first attempt at building a fullstack application after I finished the web developer bootcamo course on udemy by Colt Steele.
+`This is a  fully dynamic NodeJS and Mongo DB based portfolio for a digital agency and it was my first attempt at building a fullstack application after I finished the web developer bootcamp course on Udemy by Colt Steele.
 You have the ability to fully customize every single item on the web app,which includes the hero image, the website title, the about and the name if each of the galleries etc.
 The CSS framework used is  Bootstrap and the views are rendered with the aid of Embedded JavaScript (EJS).The images are uploaded to cloudinary and the file urls are saved to the database thereby allowing for a faster loading time. The user authentication is done with the aid of Passport JS.`
 
